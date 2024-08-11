@@ -1,5 +1,5 @@
 import React from 'react'
-import gbCharicature from "./assets/gb-charicature.png"
+import gbCharicature from "../assets/gb-charicature.png"
 
 const Hero = () => {
   return (
