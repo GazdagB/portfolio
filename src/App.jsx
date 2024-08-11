@@ -5,10 +5,11 @@ import NavBar from './NavBar'
 function App() {
 
   return (
-    <>
+    <div className='App relative'>
     <NavBar/>
-      <Hero/>
-    </>
+
+    <Hero/>
+    </div>
   )
 }
 

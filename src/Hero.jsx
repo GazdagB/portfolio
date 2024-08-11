@@ -3,7 +3,7 @@ import gbCharicature from "./assets/gb-charicature.png"
 
 const Hero = () => {
   return (
-    <div className='flex flex-col items-center mt-[40px]'>
+    <div className='flex flex-col items-center mt-[150px] h-screen w-screen'>
         <img className='h-[156px] mb-[32px]' src={gbCharicature} alt="" />
         <div className='mb-[22px] text-center '>
             <p className='text-[18px] text-[#164EF5]' >👋 HI MY NAME IS:</p>
