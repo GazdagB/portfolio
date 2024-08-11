@@ -1,4 +1,3 @@
-import React from 'react'
 import gbCharicature from "../assets/gb-charicature.png"
 import Button from '../components/Button'
 
@@ -11,7 +10,7 @@ const Hero = () => {
             <h1 className='text-[27px] font-black'>GAZDAG BALÁZS <span className='text-[#164EF5]'>*</span></h1>
         </div>
 
-        <p className='text-[22px] mb-[32px] '>I'M A WEB DEVELOPER <br /> & GRAPHIC DESIGNER</p>
+        <p className='text-[22px] mb-[32px] '>I&apos;M A WEB DEVELOPER <br /> &amp; GRAPHIC DESIGNER</p>
 
         <Button classes={"text-white rounded-full"} bgColor='#164EF5' paddingYX={"9px 31px"} text='HIRE ME' />
         {/* <button className='bg-[#164EF5] text-white py-[9px] px-[31px] rounded-full'>HIRE ME</button> */}

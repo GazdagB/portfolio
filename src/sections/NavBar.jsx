@@ -1,4 +1,3 @@
-import React from 'react'
 import gbLogo from "../assets/gb-logo-text.svg"
 import "./NavBar.css"
 
