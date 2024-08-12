@@ -18,7 +18,7 @@ Button.propTypes = {
   text: PropTypes.string.isRequired,
   paddingYX: PropTypes.string,
   bgColor: PropTypes.string.isRequired,
-  width: PropTypes.string.isRequired,
+  width: PropTypes.string,
   classes: PropTypes.string
 
 }

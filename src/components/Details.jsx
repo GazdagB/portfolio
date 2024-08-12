@@ -1,0 +1,19 @@
+
+const Details = ({detailTitle,detailBody}) => {
+
+    let dividerStyles = {
+        width: "100%",
+        height: "1px" ,
+        backgroundColor: "white"
+    }
+
+  return (
+    <div className='w-full mb-[8px]'>
+        <h3 className='text-[#9DA6A6] font-bold text-[20px] mb-[8px]'>{detailTitle}</h3>
+        <div style={dividerStyles} className='divider mb-[8px]'></div>
+        <p className='text-[18px] text-white'>{detailBody}</p>
+    </div>
+  )
+}
+
+export default Details
