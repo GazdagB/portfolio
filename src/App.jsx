@@ -1,4 +1,5 @@
 import './App.css'
+import Profile from './components/Profile'
 import FunFacts from './sections/FunFacts'
 import Hero from './sections/Hero'
 import NavBar from './sections/NavBar'
@@ -14,6 +15,7 @@ function App() {
     <Hero/>
     <FunFacts/>
     <Video/>
+    <Profile/>
     </div>
   )
 }
