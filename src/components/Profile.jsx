@@ -1,4 +1,3 @@
-import React from 'react'
 import gbImage from "../assets/gb-image.png"
 
 const Profile = () => {
