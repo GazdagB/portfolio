@@ -6,9 +6,7 @@ const Video = () => {
     
   return (
     <div className="my-[50px]">
-        <div style={{backgroundImage: `url(${bgVideo})`, backgroundSize: "120%", backgroundPosition: "10% 60%"}} className="video w-[275px] h-[174px] overflow-hidden">
-            
-        </div>
+        <iframe className="w-[300px] h-[200px]"  src="https://www.youtube.com/embed/xNRJwmlRBNU?si=PVtoMcmirru5KaWq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   )
 }
