@@ -3,7 +3,7 @@ import gbImage from "../assets/gb-image.png"
 
 const Profile = () => {
   return (
-    <div className='h-[261.3px] w-[209px] relative'>
+    <div className='h-[261.3px] w-[209px] relative mb-10'>
         <div className='bg-[#164EF5] h-[244.68px] w-[192px] rounded-lg absolute bottom-0 right-0'>
             
         </div>

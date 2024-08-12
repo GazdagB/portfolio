@@ -3,7 +3,7 @@ import Button from '../components/Button'
 
 const Hero = () => {
   return (
-    <div className='flex flex-col items-center h-svh w-screen justify-center bg-white'>
+    <div className='flex flex-col items-center h-svh w-full justify-center bg-white'>
         <img className='h-[156px] mb-[32px]' src={gbCharicature} alt="" />
         <div className='mb-[22px] text-center '>
             <p className='text-[18px] text-[#164EF5]' >👋 HI MY NAME IS:</p>
