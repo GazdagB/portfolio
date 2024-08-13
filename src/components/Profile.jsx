@@ -1,4 +1,4 @@
-import gbImage from "../assets/gb-image.png"
+import gbImage from "../assets/images/gb-image.png"
 
 const Profile = () => {
   return (

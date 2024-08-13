@@ -1,4 +1,4 @@
-import bgVideo from "../assets/video-bg.jpg"
+
 
 const Video = () => {
 

@@ -1,4 +1,4 @@
-import gbCharicature from "../assets/gb-charicature.png"
+import gbCharicature from "../assets/images/gb-charicature.png"
 import Button from '../components/Button'
 
 const Hero = () => {
