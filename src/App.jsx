@@ -29,7 +29,7 @@ function App() {
       <Details detailTitle={"LANGUAGES"} detailBody={"Hungarian, English, German"}/>
     </div>
 
-    <section className='w-full flex flex-col items-center'>
+    <section className='w-full flex flex-col items-center mb-20'>
       <h2 className='u-h2 text-white text-center mb-[32px]'>My Skills</h2>
       <Skills/>
     </section>

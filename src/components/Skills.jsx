@@ -4,6 +4,17 @@ import { IoIosArrowForward } from "react-icons/io";
 import Button from './Button'
 import IconSkill from "./IconSkill";
 
+import htmlIcon from "../assets/images/html-icon.png"
+import cssIcon from "../assets/images/css-icon.png"
+import sassIcon from "../assets/images/sass-icon.png"
+import tailwindCSSIcon from "../assets/images/tailwind-icon.png"
+import bootstrapIcon from "../assets/images/bootstrap-icon.png"
+import javascriptIcon from "../assets/images/javascript-icon.png"
+import reactIcon from "../assets/images/react.svg"
+import jqueryIcon from "../assets/images/jquery-icon.svg"
+import angularIcon from "../assets/images/angular-icon.svg"
+import gitIcon from "../assets/images/git-icon.png"
+
 const Skills = () => {
   return (
     <div>
@@ -12,9 +23,17 @@ const Skills = () => {
             <Button classes={"text-white rounded-full"} text='Frontend' bgColor='#164EF5' paddingYX={"6px 30px"}/>
             <IoIosArrowForward className="text-white text-[30px]"/>
         </div>
-        <div className="w-[280px] h-[554px] bg-[#222222] rounded-[26px] flex ">
-            <IconSkill level={"100"} skillName={"HTML"} />
-            <IconSkill level={"100"} skillName={"HTML"} />
+        <div className="w-[280px] bg-[#222222] rounded-[26px] grid-cols-2 grid">
+            <IconSkill icon={htmlIcon} level={"100"} skillName={"HTML"} />
+            <IconSkill icon={cssIcon} level={"75"} skillName={"CSS"} />
+            <IconSkill icon={sassIcon} level={"70"} skillName={"SASS"} />
+            <IconSkill icon={bootstrapIcon} level={"90"} skillName={"BOOTSTRAP"} />
+            <IconSkill icon={javascriptIcon} level={"90"} skillName={"JAVASCRIPT"} />
+            <IconSkill icon={tailwindCSSIcon} level={"90"} skillName={"TAILWIND"} />
+            <IconSkill icon={reactIcon} level={"90"} skillName={"REACT"} />
+            <IconSkill icon={jqueryIcon} level={"90"} skillName={"JQUERY"} />
+            <IconSkill icon={angularIcon} level={"90"} skillName={"ANGULAR"} />
+            <IconSkill icon={gitIcon} level={"90"} skillName={"GIT"} />
         </div>
     </div>
   )
