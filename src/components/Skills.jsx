@@ -20,7 +20,9 @@ const Skills = () => {
     <div>
         <div className="flex items-center justify-center gap-5 mb-[32px]">
             <IoIosArrowBack className="text-white text-[30px]"/>
-            <Button classes={"text-white rounded-full"} text='Frontend' bgColor='#164EF5' paddingYX={"6px 30px"}/>
+            <Button classes={"text-white rounded-full"} text='Frontend' bgColor='#164EF5' paddingYX={"6px 30px"}>
+              FRONTEND
+              </Button>
             <IoIosArrowForward className="text-white text-[30px]"/>
         </div>
         <div className="w-[280px] py-10 bg-[#222222] rounded-[26px] grid-cols-2 grid">

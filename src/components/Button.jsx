@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-const Button = ({text, paddingYX, bgColor, width, classes}) => {
+const Button = ({children, paddingYX, bgColor, width, classes}) => {
 
     let buttonStyles = {
         padding: paddingYX, 
@@ -10,7 +10,7 @@ const Button = ({text, paddingYX, bgColor, width, classes}) => {
     }
 
   return (
-    <div className={'text-center ' + classes} style={buttonStyles}>{text}</div>
+    <div className={'text-center ' + classes} style={buttonStyles}>{children}</div>
   )
 }
 

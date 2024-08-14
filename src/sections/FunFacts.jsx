@@ -7,7 +7,9 @@ const FunFacts = () => {
             <h2 className='text-[23px] font-[700] mb-4'>Random facts about me</h2>
             <p className='text-[18px]'>&quot;I&apos;m currently 25 years old.&quot;</p>
         </div>
-        <Button classes={"rounded-full font-bold"} text='New Fact' bgColor='#EF479B' paddingYX={"11px 7px"} width={"124px"}/>
+        <Button classes={"rounded-full font-bold"} text='New Fact' bgColor='#EF479B' paddingYX={"11px 7px"} width={"124px"}>
+          NEW FACT
+        </Button>
     </div>
   )
 }

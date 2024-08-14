@@ -6,6 +6,9 @@ import NavBar from './sections/NavBar'
 import Video from './sections/Video'
 import Details from './components/Details'
 import Skills from './components/Skills'
+import Project from './components/Project'
+
+import testBg from './assets/video-bg.jpg'
 
 
 function App() {
@@ -33,7 +36,17 @@ function App() {
       <h2 className='u-h2 text-white text-center mb-[32px]'>My Skills</h2>
       <Skills/>
     </section>
+    
+    <section className="w-full flex flex-col items-center px-10 text-pretty">
+      <h2 className="u-h2 text-white">My projects</h2>
+      <p className="u-body text-center text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim alias repellat earum nobis delectus fuga reprehenderit dolorum, distinctio eos aliquam aperiam ducimus consectetur ipsum! Maxime alias quam corrupti eius, ut eveniet iure itaque sint vero!</p>
+    </section>
+
+    <Project bgImage={testBg} />
+
     </div>
+
+    
   )
 }
 

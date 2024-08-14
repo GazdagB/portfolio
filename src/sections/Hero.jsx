@@ -12,7 +12,9 @@ const Hero = () => {
 
         <p className='text-[22px] mb-[32px] '>I&apos;M A WEB DEVELOPER <br /> &amp; GRAPHIC DESIGNER</p>
 
-        <Button classes={"text-white rounded-full"} bgColor='#164EF5' paddingYX={"9px 31px"} text='HIRE ME' />
+        <Button classes={"text-white rounded-full"} bgColor='#164EF5' paddingYX={"9px 31px"} >
+          HIRE ME
+          </Button>
         {/* <button className='bg-[#164EF5] text-white py-[9px] px-[31px] rounded-full'>HIRE ME</button> */}
    
     </div>
