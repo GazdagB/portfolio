@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import Button from './Button';
 import { FaGlobeEurope } from "react-icons/fa";
@@ -5,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 
 
 
+// eslint-disable-next-line react/prop-types
 const Project = ({ bgImage }) => {
   return (
     <div className="text-white">

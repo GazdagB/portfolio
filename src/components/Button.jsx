@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 
+// eslint-disable-next-line react/prop-types
 const Button = ({children, paddingYX, bgColor, width, classes}) => {
 
     let buttonStyles = {

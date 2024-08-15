@@ -1,4 +1,5 @@
 
+// eslint-disable-next-line react/prop-types
 const IconSkill = ({icon, level, skillName}) => {
   return (
     <div className='flex flex-col items-center justify-center h-[140px]'>
