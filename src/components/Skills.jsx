@@ -17,7 +17,7 @@ import gitIcon from "../assets/images/git-icon.png"
 
 const Skills = () => {
   return (
-    <div>
+    <div className="w-full px-6">
         <div className="flex items-center justify-center gap-5 mb-[32px]">
             <IoIosArrowBack className="text-white text-[30px]"/>
             <Button classes={"text-white rounded-full"} text='Frontend' bgColor='#164EF5' paddingYX={"6px 30px"}>
@@ -25,7 +25,7 @@ const Skills = () => {
               </Button>
             <IoIosArrowForward className="text-white text-[30px]"/>
         </div>
-        <div className="w-[280px] py-10 bg-[#222222] rounded-[26px] grid-cols-2 grid">
+        <div className="w-full py-10 bg-[#222222] rounded-[26px] grid-cols-2 grid">
             <IconSkill icon={htmlIcon} level={"100"} skillName={"HTML"} />
             <IconSkill icon={cssIcon} level={"85"} skillName={"CSS"} />
             <IconSkill icon={sassIcon} level={"69"} skillName={"SASS"} />

@@ -9,6 +9,18 @@ import Skills from './components/Skills'
 import Project from './components/Project'
 
 import testBg from './assets/video-bg.jpg'
+import Contact from './sections/Contact'
+
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdOutlineMailOutline } from "react-icons/md";
+
+import { FaGithub } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+
+
+
 
 
 function App() {
@@ -42,11 +54,33 @@ function App() {
       <p className="u-body text-center text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim alias repellat earum nobis delectus fuga reprehenderit dolorum, distinctio eos aliquam aperiam ducimus consectetur ipsum! Maxime alias quam corrupti eius, ut eveniet iure itaque sint vero!</p>
     </section>
 
-    <Project bgImage={testBg} />
+    <section className='w-full mb-10'>
+      <Project bgImage={testBg} />
+      <Project bgImage={testBg} />
+      <Project bgImage={testBg} />
+      <Project bgImage={testBg} />
+      <Project bgImage={testBg} />
+      <p className='underline text-white text-[20px] text-center'>See all projects</p>
+    </section>
+
+    <section className='bg-white h-[1000px] flex flex-col justify-center'>
+    <Contact/>
+    <div className='bg-[#164EF5] w-full h-[224px] px-10 py-8 text-white flex flex-col justify-center'>
+                <h3 className='text-[22px] font-black'>Contact me</h3>
+                <div className='flex flex-col'>
+                    <a className='flex text-[20px] items-center gap-3 mb-1' href="mailto:gazdagbal@gmail.com"> <MdOutlineMailOutline className='text-[20px] mb-1' />  gazdagbal@gmail.com</a>
+                    <a className='flex text-[20px] items-center gap-3 mb-6' href="tel:+4915222348975"> <FaPhoneAlt className='text-[16px] mb-1'/> +4915222348975</a>
+                    <div className='text-[25px] flex gap-2'>
+                    <FaGithub />
+                    <RiInstagramFill />
+                    <FaFacebook />
+                    <FaLinkedin />
+                    </div>
+                </div>
+    </div>
+    </section>
 
     </div>
-
-    
   )
 }
 
