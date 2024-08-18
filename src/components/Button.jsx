@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 // eslint-disable-next-line react/prop-types
-const Button = ({children, paddingYX, bgColor, width, classes}) => {
+const Button = ({children, paddingYX, bgColor, width, classes, onClick}) => {
 
     let buttonStyles = {
         padding: paddingYX, 
@@ -11,7 +11,7 @@ const Button = ({children, paddingYX, bgColor, width, classes}) => {
     }
 
   return (
-    <div className={'text-center ' + classes} style={buttonStyles}>{children}</div>
+    <div onClick={onClick} className={'text-center ' + classes} style={buttonStyles}>{children}</div>
   )
 }
 
