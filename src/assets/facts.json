@@ -30,5 +30,18 @@
     {
         "number": 8,
         "fact": "I can make a water droplet sound with my mouth."
+    },
+    {
+        "number": 9,
+        "fact": "I'm right handed."
+    },
+    {
+        "number": 10,
+        "fact": "I'm a Graphic Designer and a Fullstack Engineer."
+    },
+    {
+        "number": 11,
+        "fact": "I'm currently living in Mannheim Germany."
     }
+    
 ]

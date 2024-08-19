@@ -21,11 +21,12 @@ const NavBar = () => {
       transform: isVisible ? 'translateY(0%)' : 'translateY(-100%)'
     }
   })
+
   return (
     <>
-    <nav className='flex w-full justify-between px-5 py-3 items-center fixed bg-white z-10'>
-      <img src={gbLogo} alt="" style={{height: "50px"}}/>
-      <div onClick={() => setisVisible(prev => !prev)} className="hamburger">
+    <nav className='flex w-full justify-between px-10 py-5 items-center fixed bg-white z-10'>
+      <img className="h-[35px] sm:h-[60px]" src={gbLogo} alt=""/>
+      <div onClick={() => setisVisible(prev => !prev)} className="hamburger h-[34px] w-[34px] items-center justify-center sm:h-[50px] sm:w-[50px] sm:gap-2">
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>

@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types'
-
+import { animated, useSpring } from '@react-spring/web'
+import { useState } from 'react'
 // eslint-disable-next-line react/prop-types
 const Button = ({children, paddingYX, bgColor, width, classes, onClick}) => {
+
+  const [clicked, setClicked] = useState(false)
 
     let buttonStyles = {
         padding: paddingYX, 
@@ -10,8 +13,12 @@ const Button = ({children, paddingYX, bgColor, width, classes, onClick}) => {
         cursor: "pointer"
     }
 
+
   return (
-    <div onClick={onClick} className={'text-center ' + classes} style={buttonStyles}>{children}</div>
+    <animated.div onClick={()=>{
+      onClick();
+      prev => setClicked(!prev)
+    }} className={'text-center ' + classes} style={buttonStyles}>{children}</animated.div>
   )
 }
 
