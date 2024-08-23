@@ -16,7 +16,7 @@ const FunFacts = () => {
 
   const slideIn = useSpring({
     from: { transform: 'translateY(-100%)', opacity: 0 },
-    to: { transform: 'translateY(0%)', opacity: 1 },
+    to: { transform: 'translateY(0%)', opacity:  1 },
     reset: true,
     reverse: showNewFact,
     config: { duration: 500 }
@@ -24,7 +24,7 @@ const FunFacts = () => {
 
   const containerSpring = useSpring({
     height: contentHeight,
-    config: { duration: 200 }
+    config: { duration: 400 }
   });
 
   useEffect(() => {
