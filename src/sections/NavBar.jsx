@@ -2,6 +2,7 @@ import gbLogo from "../assets/gb-logo-text.svg"
 import "./NavBar.css"
 import { animated, useSpring } from '@react-spring/web'
 import { useState } from "react"
+import Button from "../components/Button"
 
 import { FaGithub } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
@@ -24,12 +25,23 @@ const NavBar = () => {
 
   return (
     <>
-    <nav className='flex w-full justify-between px-10 py-5 items-center fixed bg-white z-10'>
-      <img className="h-[35px] sm:h-[60px]" src={gbLogo} alt=""/>
-      <div onClick={() => setisVisible(prev => !prev)} className="hamburger h-[34px] w-[34px] items-center justify-center sm:h-[50px] sm:w-[50px] sm:gap-2">
+    <nav className='flex w-full lg:w-[90%] lg:mt-5 lg:h-[70px] justify-between px-10 py-5 lg:py-0 lg:rounded-full lg:border-black items-center fixed bg-white z-10 lg:border-[2px]'>
+      <img className="h-[35px] sm:h-[60px] " src={gbLogo} alt=""/>
+      <div  onClick={() => setisVisible(prev => !prev)} className="hamburger h-[34px] w-[34px] items-center justify-center sm:h-[50px] sm:w-[50px] sm:gap-2 lg:hidden">
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>
+      </div>
+
+      <div className=" hidden lg:flex gap-[26px]">
+        <ul className="text-[18px] gap-[26px] hidden lg:flex">
+          <li>Home</li>
+          <li>About</li>
+          <li>My Work</li>
+          <li>Skills</li>
+          <li>Blog</li>
+        </ul>
+        <Button bgColor="#164EF5" classes={"text-white py-1 px-5 rounded-full"}>Download CV</Button>
       </div>
     </nav>
 
