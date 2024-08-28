@@ -32,7 +32,7 @@ const Skills = () => {
           <Button classes={"text-white sm:text-[20px] rounded-full border-[1px]"} text='Frontend' bgColor='' paddingYX={"6px 30px"}>Backend</Button>
           <Button classes={"text-white sm:text-[20px] rounded-full border-[1px]"} text='Frontend' bgColor='' paddingYX={"6px 30px"}>Design</Button>
         </div>
-        <div className="sm:max-w-[653px] w-full py-10 bg-[#222222] rounded-[26px] flex flex-wrap justify-center px-10 gap-y-10 gap-x-8 max-w-[880px]">
+        <div className="sm:max-w-[653px] lg:max-w-[886px] w-full py-10 bg-[#222222] rounded-[26px] flex flex-wrap justify-center px-10 gap-y-10 gap-x-8 max-w-[880px]">
             <IconSkill className="w-[calc(25%-16px)]" icon={htmlIcon} level={"100"} skillName={"HTML"} />
             <IconSkill className="w-[calc(25%-16px)]" icon={cssIcon} level={"85"} skillName={"CSS"} />
             <IconSkill className="w-[calc(25%-16px)]" icon={sassIcon} level={"69"} skillName={"SASS"} />
