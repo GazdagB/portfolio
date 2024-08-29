@@ -7,7 +7,7 @@ const DesktopProject = ({number, bgImage}) => {
   return (
     <div className='flex flex-col items-center justify-center mb-8'>
         {number === 1 && (
-            <div className='hidden sm:w-[653px] sm:h-[536px] relative rounded-lg sm:flex flex-col justify-end p-12' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className='hidden sm:w-[653px] sm:h-[536px] lg:w-[920px] lg:h-[536px] relative rounded-lg sm:flex flex-col justify-end p-12' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className='absolute inset-0 bg-black opacity-50 rounded-lg'></div>
                 <div className='relative z-10 text-white mb-8'>
                     <h2 className='text-[32px] font-bold'>PROJECT TITLE</h2>
@@ -27,7 +27,7 @@ const DesktopProject = ({number, bgImage}) => {
         )}
 
         {number === 2 && (
-            <div className='text-white flex w-full justify-between py-4'> 
+            <div className='text-white flex w-full justify-between py-4 rounded-lg'> 
                 <div className='flex flex-col justify-between py-10'>
                     <div>
                         <h2 className='text-[35px] font-bold'>FIREFOX DEV TOOL</h2>
@@ -44,7 +44,7 @@ const DesktopProject = ({number, bgImage}) => {
                         </Button>
                     </div>
                 </div>
-                <div className='w-[316.73px] h-[325px] rounded-lg' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className='w-[316.73px] h-[325px] lg:w-[440px] rounded-lg' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
 
                 </div>
             </div>
@@ -52,7 +52,7 @@ const DesktopProject = ({number, bgImage}) => {
 
         {number === 3 && (
             <div className='text-white'>
-                <div className='h-[325px] w-[316.73px] rounded-lg' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+                <div className='h-[325px] w-[316.73px] lg:w-[440px] rounded-lg' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
                 <h2 className='text-[35px] font-bold'>CHESS PUZZLES</h2>
                 <div className='flex gap-4'>
                 <Button bgColor="" classes="border-[1px] text-white rounded-full flex items-center justify-center gap-2 h-[49px] w-[162px]" width="130px">

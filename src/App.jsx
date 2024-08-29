@@ -66,7 +66,7 @@ function App() {
       <MobileProject bgImage={testBg} />
 
       
-        <div className='hidden sm:block sm:w-[644px]'>
+        <div className='hidden sm:block sm:w-[644px] lg:w-[920px]'>
           <DesktopProject number={1} bgImage={testBg}/>
           <div className='h-[2px] bg-white w-full'></div>
           <DesktopProject number={2} bgImage={testBg}/>
