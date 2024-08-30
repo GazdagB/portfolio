@@ -9,6 +9,7 @@ import Skills from './components/Skills'
 import MobileProject from './components/MobileProject'
 
 import testBg from './assets/video-bg.jpg'
+import devfinder from './assets/images/devfinder_project.png'
 import Contact from './sections/Contact'
 
 
@@ -53,13 +54,13 @@ function App() {
       <Skills/>
     </section>
     
-    <section className="w-full flex flex-col items-center px-10 text-pretty mb-8">
+    <section className="w-full flex flex-col items-center px-10 text-pretty mb-8 lg:max-w-[940px]">
       <h2 className="u-h2 text-white">My projects</h2>
       <p className="u-body text-center text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim alias repellat earum nobis delectus fuga reprehenderit dolorum, distinctio eos aliquam aperiam ducimus consectetur ipsum! Maxime alias quam corrupti eius, ut eveniet iure itaque sint vero!</p>
     </section>
 
     <section className='w-full mb-10 sm:px-12 flex flex-col items-center'>
-      <MobileProject bgImage={testBg} />
+      <MobileProject bgImage={devfinder} />
       <MobileProject bgImage={testBg} />
       <MobileProject bgImage={testBg} />
       <MobileProject bgImage={testBg} />
@@ -67,7 +68,7 @@ function App() {
 
       
         <div className='hidden sm:block sm:w-[644px] lg:w-[920px]'>
-          <DesktopProject number={1} bgImage={testBg}/>
+          <DesktopProject number={1} bgImage={devfinder}/>
           <div className='h-[2px] bg-white w-full'></div>
           <DesktopProject number={2} bgImage={testBg}/>
           <div className='h-[2px] bg-white w-full'></div>
@@ -84,7 +85,7 @@ function App() {
       
     </section>
 
-    <section className='bg-white h-[1000px] sm:h-auto sm:pb-96 sm:w-full flex flex-col items-center justify-start overflow-hidden'>
+    <section className='bg-white h-[1000px] sm:h-auto sm:pb-96 lg:pb-32 sm:w-full flex flex-col items-center justify-start overflow-hidden'>
     <Contact/>
     
     </section>
