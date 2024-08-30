@@ -9,9 +9,9 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className='bg-white w-full flex flex-col items-center gap-8 px-6'>
+    <footer className='bg-white w-full flex flex-col items-center gap-8  px-6'>
         <div className='w-full h-[1px] bg-black'></div>
-        <div className='flex flex-col gap-8 sm:gap-12 sm:py-6 sm:flex-row'>
+        <div className='flex flex-col gap-8 sm:gap-12 lg:gap-48 sm:py-6 sm:flex-row'>
             <img className='w-[147.83px]' src={gbLogo} alt="" />
             <ul className='text-[18px] text-center flex flex-col sm:flex-row gap-[32px]'>
                 <li>Home</li>
@@ -19,7 +19,7 @@ const Footer = () => {
                 <li>About</li>
                 <li>Skills</li>
             </ul>
-            <div className='text-[20px] flex gap-4  mb-[30px]'>
+            <div className='text-[20px] flex gap-4   mb-[30px]'>
             <FaGithub />
             <FaFacebook />
             <AiFillInstagram />
