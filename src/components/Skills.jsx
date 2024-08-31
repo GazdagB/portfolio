@@ -1,6 +1,8 @@
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
+import { useState } from "react";
+
 import Button from './Button'
 import IconSkill from "./IconSkill";
 
@@ -16,6 +18,9 @@ import angularIcon from "../assets/images/angular-icon.svg"
 import gitIcon from "../assets/images/git-icon.png"
 
 const Skills = () => {
+
+  const [selected,setSelected] = useState("frontend")
+
   return (
     <div className="w-full px-6 flex flex-col items-center">
         <div className="flex items-center justify-center gap-5 mb-[32px] sm:hidden">
@@ -27,10 +32,10 @@ const Skills = () => {
         </div>
 
         <div className=" gap-8 mb-[32px] w-full justify-center hidden sm:flex">
-          <Button classes={"text-white sm:text-[20px] rounded-full border-[1px]"} text='Frontend' bgColor='' paddingYX={"6px 30px"}>All</Button>
-          <Button classes={"text-white sm:text-[20px] rounded-full"} text='Frontend border-[1px]' bgColor='#164EF5' paddingYX={"6px 30px"}>Frontend</Button>
-          <Button classes={"text-white sm:text-[20px] rounded-full border-[1px]"} text='Frontend' bgColor='' paddingYX={"6px 30px"}>Backend</Button>
-          <Button classes={"text-white sm:text-[20px] rounded-full border-[1px]"} text='Frontend' bgColor='' paddingYX={"6px 30px"}>Design</Button>
+          <Button onClick={()=>{setSelected("all")}} classes={`text-white sm:text-[20px] rounded-full border-[1px] ${selected  === "all" ? "border-[#164EF5]" : ""}`} text='Frontend' bgColor={selected === "all" ? "#164EF5" : ""} paddingYX={"6px 30px"}>All</Button>
+          <Button onClick={()=>{setSelected("frontend")}} classes={`text-white sm:text-[20px] rounded-full border-[1px] ${selected  === "frontend" ? "border-[#164EF5]" : ""}`} text='Frontend border-[1px]' bgColor={selected === "frontend" ? "#164EF5" : ""} paddingYX={"6px 30px"}>Frontend</Button>
+          <Button onClick={()=>{setSelected("backend")}} classes={`text-white sm:text-[20px] rounded-full border-[1px] ${selected  === "backend" ? "border-[#164EF5]" : ""}`} text='Frontend' bgColor={selected === "backend" ? "#164EF5" : ""} paddingYX={"6px 30px"}>Backend</Button>
+          <Button onClick={()=>{setSelected("design")}} classes={`text-white sm:text-[20px] rounded-full border-[1px] ${selected  === "design" ? "border-[#164EF5]" : ""}`} text='Frontend' bgColor={selected === "design" ? "#164EF5" : ""} paddingYX={"6px 30px"}>Design</Button>
         </div>
         <div className="sm:max-w-[653px] lg:max-w-[886px] w-full py-10 bg-[#222222] rounded-[26px] flex flex-wrap justify-center px-10 gap-y-10 gap-x-8 max-w-[880px]">
             <IconSkill className="w-[calc(25%-16px)]" icon={htmlIcon} level={"100"} skillName={"HTML"} />

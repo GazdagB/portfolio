@@ -68,7 +68,7 @@ function App() {
 
       
         <div className='hidden sm:block sm:w-[644px] lg:w-[920px]'>
-          <DesktopProject number={1} bgImage={devfinder}/>
+          <DesktopProject githubUrl={"https://github.com/GazdagB/github-users-app"} siteUrl={"https://gazdagb.github.io/github-users-app/"} number={1} bgImage={devfinder}/>
           <div className='h-[2px] bg-white w-full'></div>
           <DesktopProject number={2} bgImage={testBg}/>
           <div className='h-[2px] bg-white w-full'></div>

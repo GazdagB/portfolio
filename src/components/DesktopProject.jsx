@@ -1,9 +1,9 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
 import Button from './Button'
 import { FaGlobeEurope } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
-const DesktopProject = ({number, bgImage}) => {
+const DesktopProject = ({number, bgImage, siteUrl, githubUrl}) => {
   return (
     <div className='flex flex-col items-center justify-center mb-8'>
         {number === 1 && (
@@ -16,12 +16,15 @@ const DesktopProject = ({number, bgImage}) => {
                 <div className='relative z-10 flex text-white gap-6'>
                     <Button bgColor="white" classes="text-black rounded-full flex items-center justify-center gap-2 sm:h-[49px] sm:w-[162px]" width="130px">
                         <FaGlobeEurope/>
-                        <p>Live Site</p>
+                        <a href={siteUrl} target='blank'>Live Site</a>
                     </Button>
+                    <a className='flex justify-center items-center' href={githubUrl} target="_blank" rel="noopener noreferrer">
                     <Button classes="flex items-center justify-center gap-2 p-1">
                         <FaGithub />
                         Source Code
                     </Button>
+                    </a>
+                    
                 </div>
             </div>
         )}
@@ -34,14 +37,18 @@ const DesktopProject = ({number, bgImage}) => {
                         <p className='text-[35px]'>2024</p>
                     </div>
                     <div className='flex gap-4'>
+                        <a href={siteUrl} target='blank'>
                         <Button bgColor="" classes="border-[1px] text-white rounded-full flex items-center justify-center gap-2 h-[49px] w-[162px]" width="130px">
                             <FaGlobeEurope/>
                             <p>Live Site</p>
                         </Button>
-                        <Button classes="flex items-center justify-center gap-2 p-1">
-                            <FaGithub />
-                            Source Code
-                        </Button>
+                        </a>
+                        <a href={githubUrl} target='blank' className='flex justify-center'>
+                            <Button classes="flex items-center justify-center gap-2 p-1">
+                                <FaGithub />
+                                Source Code
+                            </Button>
+                        </a>
                     </div>
                 </div>
                 <div className='w-[316.73px] h-[325px] lg:w-[440px] rounded-lg' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
@@ -55,14 +62,18 @@ const DesktopProject = ({number, bgImage}) => {
                 <div className='h-[325px] w-[316.73px] lg:w-[440px] rounded-lg' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
                 <h2 className='text-[35px] font-bold'>CHESS PUZZLES</h2>
                 <div className='flex gap-4'>
-                <Button bgColor="" classes="border-[1px] text-white rounded-full flex items-center justify-center gap-2 h-[49px] w-[162px]" width="130px">
-                    <FaGlobeEurope/>
-                     <p>Live Site</p>
-                </Button>
-                <Button classes="flex items-center justify-center gap-2 p-1">
-                    <FaGithub />
-                    Source Code
-                </Button>
+                <a href={siteUrl} target='blank'>
+                    <Button bgColor="" classes="border-[1px] text-white rounded-full flex items-center justify-center gap-2 h-[49px] w-[162px]" width="130px">
+                        <FaGlobeEurope/>
+                         <p>Live Site</p>
+                    </Button>
+                </a>
+                <a href={githubUrl} className="flex justify-center">
+                    <Button classes="flex items-center justify-center gap-2 p-1">
+                        <FaGithub />
+                        Source Code
+                    </Button>
+                </a>
                 </div>
             </div>
         )}
