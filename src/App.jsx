@@ -10,6 +10,7 @@ import MobileProject from './components/MobileProject'
 
 import testBg from './assets/video-bg.jpg'
 import devfinder from './assets/images/devfinder_project.png'
+import messageSilo from './assets/images/message-silo.png'
 import Contact from './sections/Contact'
 
 
@@ -70,7 +71,7 @@ function App() {
         <div className='hidden sm:block sm:w-[644px] lg:w-[920px]'>
           <DesktopProject githubUrl={"https://github.com/GazdagB/github-users-app"} siteUrl={"https://gazdagb.github.io/github-users-app/"} number={1} bgImage={devfinder}/>
           <div className='h-[2px] bg-white w-full'></div>
-          <DesktopProject number={2} bgImage={testBg}/>
+          <DesktopProject number={2} bgImage={messageSilo} githubUrl={"https://github.com/MessageSilo/Website"} siteUrl={"https://www.message-silo.dev/"}/>
           <div className='h-[2px] bg-white w-full'></div>
           <DesktopProject number={2} bgImage={testBg}/>
           <div className='h-[2px] bg-white w-full'></div>

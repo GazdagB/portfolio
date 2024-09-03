@@ -33,7 +33,7 @@ const DesktopProject = ({number, bgImage, siteUrl, githubUrl}) => {
             <div className='text-white flex w-full justify-between py-4 rounded-lg'> 
                 <div className='flex flex-col justify-between py-10'>
                     <div>
-                        <h2 className='text-[35px] font-bold'>FIREFOX DEV TOOL</h2>
+                        <h2 className='text-[35px] font-bold'>Message Silo</h2>
                         <p className='text-[35px]'>2024</p>
                     </div>
                     <div className='flex gap-4'>
@@ -51,7 +51,7 @@ const DesktopProject = ({number, bgImage, siteUrl, githubUrl}) => {
                         </a>
                     </div>
                 </div>
-                <div className='w-[316.73px] h-[325px] lg:w-[440px] rounded-lg' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className='w-[316.73px] h-[325px] lg:w-[440px] rounded-lg' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'left' }}>
 
                 </div>
             </div>
