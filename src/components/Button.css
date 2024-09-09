@@ -1,0 +1,22 @@
+.animated-btn{
+    animation: btn-rotate 1s ease-in-out ;
+}
+
+@keyframes btn-rotate {
+    0% {
+        transform: rotate(0deg);
+        width: 124px;
+        height: 46px;
+    }
+
+    50% {
+    width: 46px;
+    background-color: #164ef5;
+    }
+
+  100% {
+    transform: rotate(360deg);
+    width: 124px;
+    height: 46px;
+  }
+}

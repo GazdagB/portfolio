@@ -57,7 +57,7 @@ const FunFacts = () => {
           {fact && <p className='text-[18px] sm:text-[20px]'><span className='text-[#EF479B]'>{`FACT ${fact.number}: `}</span>{fact.fact}</p>}
         </animated.div>
       </animated.div>
-      <Button onClick={handleNewFact} classes={"rounded-full font-bold"} text='New Fact' bgColor='#EF479B' paddingYX={"11px 7px"} width={"124px"}>
+      <Button isAnimated={true} onClick={handleNewFact} classes={"rounded-full font-bold"} text='New Fact' bgColor='#EF479B' paddingYX={"11px 7px"} width={"124px"}>
         NEW FACT
       </Button>
     </div>
