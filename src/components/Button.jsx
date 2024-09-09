@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import './Button.css';
 
-const Button = ({ children, paddingYX, bgColor, width, classes, onClick, isAnimated }) => {
+const Button = ({ children, paddingYX, bgColor, height, width, classes, onClick = ()=>{}, isAnimated }) => {
   const [clicked, setClicked] = useState(false);
 
   function handleClick() {
@@ -27,19 +27,21 @@ const Button = ({ children, paddingYX, bgColor, width, classes, onClick, isAnima
     padding: paddingYX,
     background: bgColor,
     width: width,
+    height: height,
     cursor: 'pointer',
   };
-
   // Conditionally add "animated-btn" class if isAnimated and clicked is true
   const buttonClassNames = `text-center ${classes} ${isAnimated && clicked ? 'animated-btn' : ''}`;
 
   return (
-    <div
-      onClick={handleClick}
-      className={buttonClassNames}
-      style={buttonStyles}
-    >
-      {(!isAnimated || !clicked) && children} {/* Only show children if not animated or not clicked */}
+    <div className={`w-[${width}] h-[${height}]`}>
+      <div
+        onClick={handleClick}
+        className={buttonClassNames}
+        style={buttonStyles}
+      >
+        {(!isAnimated || !clicked) && children} {/* Only show children if not animated or not clicked */}
+      </div>
     </div>
   );
 };
