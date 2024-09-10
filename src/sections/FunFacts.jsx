@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import Button from '../components/Button'
 import funFacts from '../assets/facts.json';
 import { animated, useSpring } from '@react-spring/web'
+import {Fade} from "react-awesome-reveal"
 
 const FunFacts = () => {
   const [fact, setFact] = useState(funFacts[0]);
@@ -51,6 +52,7 @@ const FunFacts = () => {
 
   return (
     <div className='bg-[#2C2C2C] text-white flex flex-col items-center py-10 px-10 w-full text-pretty'>
+      <Fade direction='up'>
       <h2 className='text-[23px] sm:text-[31px] font-[700] mb-4'>Random facts about me</h2>
       <animated.div style={{ ...containerSpring, overflow: 'hidden' }} className={"mb-10"}>
         <animated.div style={showNewFact ? fadeOut : slideIn} className='text-center' ref={contentRef}>
@@ -60,6 +62,7 @@ const FunFacts = () => {
       <Button isAnimated={true} onClick={handleNewFact} classes={"rounded-full font-bold"} text='New Fact' bgColor='#EF479B' paddingYX={"11px 7px"} width={"124px"} height={"46px"}>
         NEW FACT
       </Button>
+      </Fade>
     </div>
   )
 }
