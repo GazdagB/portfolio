@@ -30,7 +30,7 @@ import photoshopIcon from "../assets/images/design-icons/photoshop.svg"
 import illustratorIcon from "../assets/images/design-icons/illustrator.svg"
 import inDesignIcon from "../assets/images/design-icons/indesign.svg"
 import figmaIcon from "../assets/images/design-icons/figma.svg"
-import xdIcon from "../assets/images/design-icons/adobexd.svg"
+// import xdIcon from "../assets/images/design-icons/adobexd.svg"
 import afterEffectsIcon from "../assets/images/design-icons/aftereffects.svg"
 import premierProIcon from "../assets/images/design-icons/premierpro.svg"
 

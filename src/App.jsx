@@ -15,7 +15,7 @@ import devfinder from "./assets/images/devfinder_project.png";
 import messageSilo from "./assets/images/message-silo.png";
 import Contact from "./sections/Contact";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 import DesktopProject from "./components/DesktopProject";
 import Footer from "./sections/Footer";
