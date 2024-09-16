@@ -28,8 +28,8 @@ const NavBar = () => {
 
   return (
     <>
-      <motion.nav className='flex w-full lg:w-[90%] lg:mt-5 lg:h-[70px] justify-between px-10 py-5 lg:py-0 lg:rounded-full lg:border-black items-center fixed bg-white z-10 lg:border-[2px] 2xl:max-w-[1600px]' initial={{ y: -200 }} animate={{ y: 0 }} transition={{ duration: 1.2 }}>
-        <img className="h-[35px] sm:h-[60px]" src={gbLogo} alt="" />
+      <motion.nav className='flex w-full lg:w-[90%] lg:mt-5 lg:h-[70px] justify-between px-10 py-5 lg:py-0 2xl:py-10 lg:rounded-full lg:border-black items-center fixed bg-white z-10 lg:border-[2px] 2xl:max-w-[1600px]' initial={{ y: -200 }} animate={{ y: 0 }} transition={{ duration: 1.2 }}>
+        <img className="h-[35px] sm:h-[60px] 2xl:h-[70px]" src={gbLogo} alt="" />
         <div onClick={() => setisVisible(prev => !prev)} className="hamburger h-[34px] w-[34px] items-center justify-center sm:h-[50px] sm:w-[50px] sm:gap-2 lg:hidden">
           <div className="bar"></div>
           <div className="bar"></div>
@@ -37,7 +37,7 @@ const NavBar = () => {
         </div>
 
         <div className="hidden lg:flex gap-[26px]">
-          <ul className="text-[18px] hidden items-center lg:flex">
+          <ul className="text-[18px] hidden items-center justify-center lg:flex 2xl:text-xl">
             <Tab setPosition={setPosition} selected={selected} setSelected={setSelected}>Home</Tab>
             <Tab setPosition={setPosition} selected={selected} setSelected={setSelected}>About</Tab>
             <Tab setPosition={setPosition} selected={selected} setSelected={setSelected}>Skills</Tab>
@@ -45,7 +45,7 @@ const NavBar = () => {
             <Tab setPosition={setPosition} selected={selected} setSelected={setSelected}>Blog</Tab>
             <Cursor position={position} />
           </ul>
-          <Button bgColor="#164EF5" classes={"text-white py-1 px-5 rounded-full"}>Download CV</Button>
+          <Button bgColor="#164EF5" classes={"text-white py-1 px-5 rounded-full 2xl:py-2"}>Download CV</Button>
         </div>
       </motion.nav>
 
