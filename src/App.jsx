@@ -77,7 +77,7 @@ function App() {
       </section>
 
       <section className="w-full flex flex-col items-center px-10 text-pretty mb-8 lg:max-w-[940px]">
-        <Fade direction="right">
+        <Fade direction="right" triggerOnce>
           <h2 className="u-h2 text-white">My projects</h2>
           <p className="u-body text-center text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim alias
