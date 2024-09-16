@@ -28,7 +28,7 @@ const NavBar = () => {
 
   return (
     <>
-      <motion.nav className='flex w-full lg:w-[90%] lg:mt-5 lg:h-[70px] justify-between px-10 py-5 lg:py-0 lg:rounded-full lg:border-black items-center fixed bg-white z-10 lg:border-[2px]' initial={{ y: -200 }} animate={{ y: 0 }} transition={{ duration: 1.2 }}>
+      <motion.nav className='flex w-full lg:w-[90%] lg:mt-5 lg:h-[70px] justify-between px-10 py-5 lg:py-0 lg:rounded-full lg:border-black items-center fixed bg-white z-10 lg:border-[2px] 2xl:max-w-[1600px]' initial={{ y: -200 }} animate={{ y: 0 }} transition={{ duration: 1.2 }}>
         <img className="h-[35px] sm:h-[60px]" src={gbLogo} alt="" />
         <div onClick={() => setisVisible(prev => !prev)} className="hamburger h-[34px] w-[34px] items-center justify-center sm:h-[50px] sm:w-[50px] sm:gap-2 lg:hidden">
           <div className="bar"></div>
