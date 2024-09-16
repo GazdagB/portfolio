@@ -1,4 +1,5 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
 import { animated, useSpring } from '@react-spring/web';
 import { motion } from "framer-motion";
 import Tab from "../components/Tab";
@@ -6,14 +7,14 @@ import Cursor from "../components/Cursor.jsx";
 import Button from "../components/Button";
 import gbLogo from "../assets/gb-logo-text.svg";
 
-const NavBar = () => {
+const NavBar = ({scrollY,elementPlacements}) => {
   const [isVisible, setisVisible] = useState(false);
+  const [tabSelected,setTabSelected] = useState("home")
   const [position, setPosition] = useState({
     left: null,
     width: 100,
     opacity: 0
   });
-  
   // State to track the selected tab
   const [selected, setSelected] = useState({
     width: 100,
@@ -25,6 +26,29 @@ const NavBar = () => {
     from: { transform: 'translateY(-100%)' },
     to: { transform: isVisible ? 'translateY(0%)' : 'translateY(-100%)' }
   });
+
+ console.log(scrollY);
+ 
+
+  useEffect(selectTab, [scrollY])
+
+  function selectTab(){
+
+    if(scrollY == 0){
+      setTabSelected("home")
+      return; 
+    }
+    
+    if (elementPlacements.contact <= scrollY) {
+      setTabSelected("contact");
+    } else if (elementPlacements.work <= scrollY) {
+      setTabSelected("work");
+    } else if (elementPlacements.about <= scrollY) {
+      setTabSelected("about");
+    } else {
+      setTabSelected("home");
+    }
+  }
 
   return (
     <>
@@ -38,11 +62,10 @@ const NavBar = () => {
 
         <div className="hidden lg:flex gap-[26px]">
           <ul className="text-[18px] hidden items-center justify-center lg:flex 2xl:text-xl">
-            <Tab setPosition={setPosition} selected={selected} setSelected={setSelected}>Home</Tab>
-            <Tab setPosition={setPosition} selected={selected} setSelected={setSelected}>About</Tab>
-            <Tab setPosition={setPosition} selected={selected} setSelected={setSelected}>Skills</Tab>
-            <Tab setPosition={setPosition} selected={selected} setSelected={setSelected}>My Work</Tab>
-            <Tab setPosition={setPosition} selected={selected} setSelected={setSelected}>Blog</Tab>
+            <Tab isScrollSelected={tabSelected === "home"} data-tab="Home" setPosition={setPosition} selected={selected} setSelected={setSelected} >Home</Tab>
+            <Tab isScrollSelected={tabSelected === "about"} data-tab="About" setPosition={setPosition} selected={selected} setSelected={setSelected} >About</Tab>
+            <Tab isScrollSelected={tabSelected === "work"} data-tab="My work" setPosition={setPosition} selected={selected} setSelected={setSelected} >My Work</Tab>
+            <Tab isScrollSelected={tabSelected === "contact"} data-tab="Contact" setPosition={setPosition} selected={selected} setSelected={setSelected} >Contact</Tab>
             <Cursor position={position} />
           </ul>
           <Button bgColor="#164EF5" classes={"text-white py-1 px-5 rounded-full 2xl:py-2"}>Download CV</Button>

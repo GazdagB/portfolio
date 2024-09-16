@@ -1,12 +1,15 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
-const Tab = ({ children, setPosition, selected, setSelected }) => {
+const Tab = ({ children, setPosition, selected, setSelected, isScrollSelected }) => {
   const ref = useRef(null);
+
+  
 
   function handleMouseEnter() {
     if (!ref.current) return;
 
     const { width } = ref.current.getBoundingClientRect();
+
     setPosition({
       width,
       opacity: 1,
@@ -21,23 +24,45 @@ const Tab = ({ children, setPosition, selected, setSelected }) => {
   }
 
   function handleClick() {
-    if (!ref.current) return;
-
-    const { width } = ref.current.getBoundingClientRect();
-
-    // Save the selected tab position
-    const newSelected = {
-      width,
-      opacity: 1,
-      left: ref.current.offsetLeft
-    };
-
-    setSelected(newSelected); // Set the selected position
-    setPosition(newSelected); // Move the cursor to the clicked tab
+   transitionCursor();
   }
 
+  useEffect(()=>{
+    window.addEventListener("resize",()=>{
+      transitionCursor(); 
+    })
+  },[])
+
+  useEffect(() => {
+    if (isScrollSelected) {
+     transitionCursor()
+    }
+  }, [isScrollSelected]);
+
+  function transitionCursor(){
+    if (!ref.current) return;
+
+      const { width } = ref.current.getBoundingClientRect();
+
+      // Save the selected tab position
+      const newSelected = {
+        width,
+        opacity: 1,
+        left: ref.current.offsetLeft
+      };
+
+      setSelected(newSelected); // Set the selected position
+      setPosition(newSelected);
+
+  }
   return (
-    <li ref={ref} onMouseLeave={handleMouseLeave} onClick={handleClick} onMouseEnter={handleMouseEnter} className='relative z-10 block cursor-pointer uppercase text-white mix-blend-difference px-5 '>
+    <li
+      ref={ref}
+      onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
+      onMouseEnter={handleMouseEnter}
+      className='relative z-10 block cursor-pointer uppercase text-white mix-blend-difference px-5 '
+    >
       {children}
     </li>
   );

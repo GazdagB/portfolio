@@ -47,7 +47,7 @@ const FunFacts = () => {
     setTimeout(() => {
       setFact(prevFact => getRandomFact(funFacts, prevFact));
       setShowNewFact(false); // Trigger slide in
-    }, 200); // Match the duration of the fade out animation
+    }, 200); // Match the duration of- the fade out animation
   }
 
   return (
