@@ -14,14 +14,14 @@ const DesktopProject = ({number, bgImage, siteUrl, githubUrl}) => {
                     <p className='text-[35px]'>2024</p>
                 </div>
                 <div className='relative z-10 flex text-white gap-6'>
-                    <Button bgColor="white" classes="text-black rounded-full flex items-center justify-center gap-2 sm:h-[49px] sm:w-[162px]" width="130px">
+                    <Button bgColor="white" classes="text-black rounded-full flex items-center justify-center gap-2 sm:h-[49px] sm:w-[162px]" width="140px">
                         <FaGlobeEurope/>
-                        <a href={siteUrl} target='blank'>Live Site</a>
+                        <a className='2xl:text-xl' href={siteUrl} target='blank'>Live Site</a>
                     </Button>
                     <a className='flex justify-center items-center' href={githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Button classes="flex items-center justify-center gap-2 p-1">
+                    <Button classes="flex items-center justify-center gap-2 p-1 2xl:text-xl">
                         <FaGithub />
-                        Source Code
+                        <p className=''>Source Code</p>
                     </Button>
                     </a>
                     
@@ -36,17 +36,17 @@ const DesktopProject = ({number, bgImage, siteUrl, githubUrl}) => {
                         <h2 className='text-[35px] font-bold'>Message Silo</h2>
                         <p className='text-[35px]'>2024</p>
                     </div>
-                    <div className='flex gap-4'>
+                    <div className='flex items-center gap-4 2xl:text-xl'>
                         <a href={siteUrl} target='blank'>
-                        <Button bgColor="" classes="border-[1px] text-white rounded-full flex items-center justify-center gap-2 h-[49px] w-[162px]" width="130px">
+                        <Button bgColor="" classes="border-[1px] text-white rounded-full flex items-center justify-center gap-2 h-[49px] w-[162px]" width="140px">
                             <FaGlobeEurope/>
-                            <p>Live Site</p>
+                            <p >Live Site</p>
                         </Button>
                         </a>
                         <a href={githubUrl} target='blank' className='flex justify-center'>
-                            <Button classes="flex items-center justify-center gap-2 p-1">
+                            <Button classes="flex items-center justify-center gap-2 p-1 2xl:text-xl">
                                 <FaGithub />
-                                Source Code
+                                <p >Source Code</p>
                             </Button>
                         </a>
                     </div>
@@ -61,14 +61,14 @@ const DesktopProject = ({number, bgImage, siteUrl, githubUrl}) => {
             <div className='text-white'>
                 <div className='h-[325px] w-[316.73px] lg:w-[440px] rounded-lg' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
                 <h2 className='text-[35px] font-bold'>CHESS PUZZLES</h2>
-                <div className='flex gap-4'>
-                <a href={siteUrl} target='blank'>
-                    <Button bgColor="" classes="border-[1px] text-white rounded-full flex items-center justify-center gap-2 h-[49px] w-[162px]" width="130px">
+                <div className='flex gap-4 items-center'>
+                <a  href={siteUrl} target='blank'>
+                    <Button bgColor="" classes="border-[1px] text-white rounded-full flex items-center justify-center gap-2 h-[49px] w-[162px] 2xl:text-xl" width="140px">
                         <FaGlobeEurope/>
                          <p>Live Site</p>
                     </Button>
                 </a>
-                <a href={githubUrl} className="flex justify-center">
+                <a href={githubUrl} className="flex justify-center 2xl:text-xl">
                     <Button classes="flex items-center justify-center gap-2 p-1">
                         <FaGithub />
                         Source Code

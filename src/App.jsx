@@ -42,7 +42,7 @@ function App() {
             <h2 className="text-white font-bold text-[30px] sm:text-[48.52px]">
               Get to know me
             </h2>
-            <p className="u-body text-white text-center px-[24px] text-pretty mb-10">
+            <p className="u-body text-white text-center px-[24px] text-pretty 2xl:text-xl mb-10">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
               totam ipsum labore distinctio harum. Error amet dignissimos hic
               aliquid labore deleniti molestiae rem sit id dolore tempora vitae
@@ -79,7 +79,7 @@ function App() {
       <section className="w-full flex flex-col items-center px-10 text-pretty mb-8 lg:max-w-[940px]">
         <Fade direction="right" triggerOnce>
           <h2 className="u-h2 text-white">My projects</h2>
-          <p className="u-body text-center text-white">
+          <p className="u-body text-center 2xl:text-xl text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim alias
             repellat earum nobis delectus fuga reprehenderit dolorum, distinctio
             eos aliquam aperiam ducimus consectetur ipsum! Maxime alias quam
