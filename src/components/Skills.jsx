@@ -90,12 +90,6 @@ const skills = [
     category: "frontend"
   },
   {
-    icon: angularIcon,
-    level: "40",
-    skillName: "ANGULAR",
-    category: "frontend"
-  },
-  {
     icon: gitIcon,
     level: "85",
     skillName: "ANGULAR",
