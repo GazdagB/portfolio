@@ -19,8 +19,23 @@ import Contact from "./sections/Contact";
 
 import DesktopProject from "./components/DesktopProject";
 import Footer from "./sections/Footer";
+import { useState, useEffect} from "react";
 
 function App() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <div className="App absolute bg-[#0D0F0E] flex flex-col items-center w-full">
       <NavBar />
