@@ -73,8 +73,10 @@ const NavBar = ({scrollY,elementPlacements}) => {
             <Tab anchorTo={"#contact"} isScrollSelected={tabSelected === "contact"} data-tab="Contact" setPosition={setPosition} selected={selected} setSelected={setSelected} >Contact</Tab>
             <Cursor position={position} />
           </ul>
-          <Button whileHover={btnHoverStyles} bgColor="#164EF5" classes={"text-white flex gap-2 items-center py-1 px-5 rounded-full 2xl:py-2"}><FaFileDownload className="mb-1" />
-          Download CV</Button>
+          <a href="../assets/resume.pdf" download={'resume.pdf'}>
+            <Button whileHover={btnHoverStyles} bgColor="#164EF5" classes={"text-white flex gap-2 items-center py-1 px-5 rounded-full 2xl:py-2"}><FaFileDownload className="mb-1" />
+            Download CV</Button>
+          </a>
         </div>
       </motion.nav>
 
