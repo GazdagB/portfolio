@@ -1,10 +1,10 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, memo } from 'react';
 import Button from '../components/Button'
 import funFacts from '../assets/facts.json';
 import { animated, useSpring } from '@react-spring/web'
 import {Fade} from "react-awesome-reveal"
 
-const FunFacts = () => {
+const FunFacts = memo(function FunFacts() {
   const [fact, setFact] = useState(funFacts[0]);
   const [showNewFact, setShowNewFact] = useState(false);
   const [contentHeight, setContentHeight] = useState(0);
@@ -65,6 +65,8 @@ const FunFacts = () => {
       </Fade>
     </div>
   )
-}
+})
 
-export default FunFacts
+FunFacts.displayName = "FunFacts";
+
+export default FunFacts;
