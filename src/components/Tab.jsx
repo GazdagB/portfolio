@@ -1,6 +1,8 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useRef, useEffect } from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 
-const Tab = ({ children, setPosition, selected, setSelected, isScrollSelected }) => {
+const Tab = ({ children, setPosition, selected, setSelected, isScrollSelected, anchorTo}) => {
   const ref = useRef(null);
 
   
@@ -56,6 +58,7 @@ const Tab = ({ children, setPosition, selected, setSelected, isScrollSelected })
 
   }
   return (
+    <Link smooth to={anchorTo}>
     <li
       ref={ref}
       onMouseLeave={handleMouseLeave}
@@ -65,6 +68,7 @@ const Tab = ({ children, setPosition, selected, setSelected, isScrollSelected })
     >
       {children}
     </li>
+    </Link>
   );
 };
 

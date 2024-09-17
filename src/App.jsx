@@ -8,6 +8,8 @@ import Details from "./components/Details";
 import Skills from "./components/Skills";
 import MobileProject from "./components/MobileProject";
 
+
+
 import { Fade } from "react-awesome-reveal";
 
 import testBg from "./assets/video-bg.jpg";
@@ -86,12 +88,12 @@ function App() {
       <NavBar scrollY={scrollY} elementPlacements={elementPlacements} />
 
       {/* Hero Section */}
-      <section className="w-full" ref={homeRef}>
+      <section id="home" className="w-full" ref={homeRef}>
         <Hero />
       </section>
 
       {/* About Section */}
-      <section ref={aboutRef} className="w-full mb-16">
+      <section id="about" ref={aboutRef} className="w-full mb-16">
         <FunFacts />
         <Video />
 
@@ -139,7 +141,7 @@ function App() {
         <Skills />
       </section>
 
-      <section ref={workRef} className="w-full flex flex-col items-center px-10 text-pretty mb-8 lg:max-w-[940px]">
+      <section id="work" ref={workRef} className="w-full flex flex-col items-center px-10 text-pretty mb-8 lg:max-w-[940px]">
         <Fade direction="right" triggerOnce>
           <h2 className="u-h2 text-white">My projects</h2>
           <p className="u-body text-center mb-10 2xl:text-xl text-white">
@@ -194,7 +196,7 @@ function App() {
         </Fade>
       </section>
 
-      <section ref={contactRef} className="bg-white h-[1000px] sm:h-auto sm:pb-96 lg:pb-32 sm:w-full flex flex-col items-center justify-start overflow-hidden">
+      <section id="contact" ref={contactRef} className="bg-white h-[1000px] sm:h-auto sm:pb-96 lg:pb-32 sm:w-full flex flex-col items-center justify-start overflow-hidden">
         <Contact />
       </section>
 

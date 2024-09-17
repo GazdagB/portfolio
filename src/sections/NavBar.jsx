@@ -62,10 +62,10 @@ const NavBar = ({scrollY,elementPlacements}) => {
 
         <div className="hidden lg:flex gap-[26px]">
           <ul className="text-[18px] hidden items-center justify-center lg:flex 2xl:text-xl">
-            <Tab isScrollSelected={tabSelected === "home"} data-tab="Home" setPosition={setPosition} selected={selected} setSelected={setSelected} >Home</Tab>
-            <Tab isScrollSelected={tabSelected === "about"} data-tab="About" setPosition={setPosition} selected={selected} setSelected={setSelected} >About</Tab>
-            <Tab isScrollSelected={tabSelected === "work"} data-tab="My work" setPosition={setPosition} selected={selected} setSelected={setSelected} >My Work</Tab>
-            <Tab isScrollSelected={tabSelected === "contact"} data-tab="Contact" setPosition={setPosition} selected={selected} setSelected={setSelected} >Contact</Tab>
+            <Tab anchorTo={"#home"} isScrollSelected={tabSelected === "home"} data-tab="Home" setPosition={setPosition} selected={selected} setSelected={setSelected} >Home</Tab>
+            <Tab anchorTo={"#about"} isScrollSelected={tabSelected === "about"} data-tab="About" setPosition={setPosition} selected={selected} setSelected={setSelected} >About</Tab>
+            <Tab anchorTo={"#work"} isScrollSelected={tabSelected === "work"} data-tab="My work" setPosition={setPosition} selected={selected} setSelected={setSelected} >My Work</Tab>
+            <Tab anchorTo={"#contact"} isScrollSelected={tabSelected === "contact"} data-tab="Contact" setPosition={setPosition} selected={selected} setSelected={setSelected} >Contact</Tab>
             <Cursor position={position} />
           </ul>
           <Button bgColor="#164EF5" classes={"text-white py-1 px-5 rounded-full 2xl:py-2"}>Download CV</Button>
