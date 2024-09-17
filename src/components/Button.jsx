@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import './Button.css';
+import {motion} from "framer-motion"
 
-const Button = ({ children, paddingYX, bgColor, height, width, classes, onClick = ()=>{}, isAnimated }) => {
+const Button = ({ children, paddingYX, bgColor, height, width, classes, onClick = ()=>{}, isAnimated, whileHover}) => {
   const [clicked, setClicked] = useState(false);
 
   function handleClick() {
@@ -35,13 +36,14 @@ const Button = ({ children, paddingYX, bgColor, height, width, classes, onClick 
 
   return (
     <div className={`w-[${width}] h-[${height}]`}>
-      <div
+      <motion.div
         onClick={handleClick}
         className={buttonClassNames}
         style={buttonStyles}
+        whileHover={whileHover}
       >
         {(!isAnimated || !clicked) && children} {/* Only show children if not animated or not clicked */}
-      </div>
+      </motion.div>
     </div>
   );
 };
@@ -53,6 +55,7 @@ Button.propTypes = {
   width: PropTypes.string,
   classes: PropTypes.string,
   onClick: PropTypes.func.isRequired,
+  whileHover: PropTypes.object,
   isAnimated: PropTypes.bool, // Add the isAnimated prop to control the animation
 };
 

@@ -6,6 +6,8 @@ import Tab from "../components/Tab";
 import Cursor from "../components/Cursor.jsx";
 import Button from "../components/Button";
 import gbLogo from "../assets/gb-logo-text.svg";
+import { FaFileDownload } from "react-icons/fa";
+
 
 const NavBar = ({scrollY,elementPlacements}) => {
   const [isVisible, setisVisible] = useState(false);
@@ -68,7 +70,8 @@ const NavBar = ({scrollY,elementPlacements}) => {
             <Tab anchorTo={"#contact"} isScrollSelected={tabSelected === "contact"} data-tab="Contact" setPosition={setPosition} selected={selected} setSelected={setSelected} >Contact</Tab>
             <Cursor position={position} />
           </ul>
-          <Button bgColor="#164EF5" classes={"text-white py-1 px-5 rounded-full 2xl:py-2"}>Download CV</Button>
+          <Button whileHover={{scale: 1.05, backgroundColor: "#EF479B"}} bgColor="#164EF5" classes={"text-white flex gap-2 items-center py-1 px-5 rounded-full 2xl:py-2"}><FaFileDownload className="mb-1" />
+          Download CV</Button>
         </div>
       </motion.nav>
 

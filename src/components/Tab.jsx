@@ -1,10 +1,16 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useRef, useEffect } from 'react';
+import  { useRef, useEffect } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
+import {motion} from "framer-motion"
 
 const Tab = ({ children, setPosition, selected, setSelected, isScrollSelected, anchorTo}) => {
   const ref = useRef(null);
 
+  const hoverStyles = {
+    scale: 1.05
+  }
+
+  let selectedScale;
   
 
   function handleMouseEnter() {
@@ -33,6 +39,7 @@ const Tab = ({ children, setPosition, selected, setSelected, isScrollSelected, a
     window.addEventListener("resize",()=>{
       transitionCursor(); 
     })
+
   },[])
 
   useEffect(() => {
@@ -59,15 +66,17 @@ const Tab = ({ children, setPosition, selected, setSelected, isScrollSelected, a
   }
   return (
     <Link smooth to={anchorTo}>
-    <li
+    <motion.li
       ref={ref}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
-      className='relative z-10 block cursor-pointer uppercase text-white mix-blend-difference px-5 '
+      className='relative z-10 block cursor-pointer uppercase text-white mix-blend-difference px-5'
+      whileHover={hoverStyles}
+      animate={isScrollSelected ? {scale: 1.05} : {scale: 1}}
     >
       {children}
-    </li>
+    </motion.li>
     </Link>
   );
 };
