@@ -10,6 +10,11 @@ const FunFacts = memo(function FunFacts() {
   const [contentHeight, setContentHeight] = useState(0);
   const contentRef = useRef(null);
 
+  const btnHoverStyles = {
+    scale: 1.05,
+    boxShadow: "0px 10px 10px rgba(0, 0, 0, 0.3)"
+  }
+
   const fadeOut = useSpring({
     opacity: showNewFact ? 0 : 1,
     config: { duration: 200 }
@@ -59,7 +64,7 @@ const FunFacts = memo(function FunFacts() {
           {fact && <p className='text-[18px] sm:text-[20px] 2xl:text-2xl'><span className='text-[#EF479B]'>{`FACT ${fact.number}: `}</span>{fact.fact}</p>}
         </animated.div>
       </animated.div>
-      <Button isAnimated={true} onClick={handleNewFact} classes={"rounded-full font-bold"} text='New Fact' bgColor='#EF479B' paddingYX={"11px 7px"} width={"124px"} height={"46px"}>
+      <Button whileHover={btnHoverStyles} isAnimated={true} onClick={handleNewFact} classes={"rounded-full font-bold"} text='New Fact' bgColor='#EF479B' paddingYX={"11px 7px"} width={"124px"} height={"46px"}>
         NEW FACT
       </Button>
       </Fade>

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './Button.css';
 import {motion} from "framer-motion"
 
-const Button = ({ children, paddingYX, bgColor, height, width, classes, onClick = ()=>{}, isAnimated, whileHover}) => {
+const Button = ({ children, paddingYX, bgColor, height, width, classes, onClick = ()=>{}, isAnimated, whileHover, animate}) => {
   const [clicked, setClicked] = useState(false);
 
   function handleClick() {
@@ -37,6 +37,7 @@ const Button = ({ children, paddingYX, bgColor, height, width, classes, onClick 
   return (
     <div className={`w-[${width}] h-[${height}]`}>
       <motion.div
+        animate={animate}
         onClick={handleClick}
         className={buttonClassNames}
         style={buttonStyles}

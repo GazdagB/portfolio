@@ -40,6 +40,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Fade } from "react-awesome-reveal";
 
 
+
 const skills = [
   {
     icon: htmlIcon,
@@ -209,6 +210,18 @@ const skillsAnimation = {
 };
 
 const Skills = () => {
+  const btnHoverStyles = 
+  {
+    scale: 1.05,
+    backgroundColor: "#EF479B",
+    border: "#EF479B"
+  }
+
+  const selectedStyles = 
+  {
+    backgroundColor: '#164EF5',
+    border: '#164EF5'
+  }
   const [selected, setSelected] = useState("frontend");
 
   const filteredSkills = skills.filter(skill => selected === "all" || skill.category === selected);
@@ -225,10 +238,10 @@ const Skills = () => {
 
       <div className="gap-8 mb-[32px] w-full justify-center hidden sm:flex">
         <Fade direction="right" cascade={true} duration={500}>
-          <Button onClick={() => { setSelected("all") }} classes={`text-white sm:text-[20px] rounded-full border-[1px] ${selected === "all" ? "border-[#164EF5]" : ""}`} text='Frontend' bgColor={selected === "all" ? "#164EF5" : ""} paddingYX={"6px 30px"}>All</Button>
-          <Button onClick={() => { setSelected("frontend") }} classes={`text-white sm:text-[20px] rounded-full border-[1px] ${selected === "frontend" ? "border-[#164EF5]" : ""}`} text='Frontend border-[1px]' bgColor={selected === "frontend" ? "#164EF5" : ""} paddingYX={"6px 30px"}>Frontend</Button>
-          <Button onClick={() => { setSelected("backend") }} classes={`text-white sm:text-[20px] rounded-full border-[1px] ${selected === "backend" ? "border-[#164EF5]" : ""}`} text='Frontend' bgColor={selected === "backend" ? "#164EF5" : ""} paddingYX={"6px 30px"}>Backend</Button>
-          <Button onClick={() => { setSelected("design") }} classes={`text-white sm:text-[20px] rounded-full border-[1px] ${selected === "design" ? "border-[#164EF5]" : ""}`} text='Frontend' bgColor={selected === "design" ? "#164EF5" : ""} paddingYX={"6px 30px"}>Design</Button>
+          <Button whileHover={btnHoverStyles} animate={selected === "all" ? selectedStyles : {}} onClick={() => { setSelected("all") }} classes={`text-white sm:text-[20px] rounded-full border-[1px]`} text='Frontend' paddingYX={"6px 30px"}>All</Button>
+          <Button whileHover={btnHoverStyles} animate={selected === "frontend" ? selectedStyles : {}} onClick={() => { setSelected("frontend") }} classes={`text-white sm:text-[20px] rounded-full border-[1px] }`} text='Frontend border-[1px]' paddingYX={"6px 30px"}>Frontend</Button>
+          <Button whileHover={btnHoverStyles} animate={selected === "backend" ? selectedStyles : {}} onClick={() => { setSelected("backend") }} classes={`text-white sm:text-[20px] rounded-full border-[1px]`} text='Frontend'  paddingYX={"6px 30px"}>Backend</Button>
+          <Button whileHover={btnHoverStyles} animate={selected === "design" ? selectedStyles : {}} onClick={() => { setSelected("design") }} classes={`text-white sm:text-[20px] rounded-full border-[1px]`} text='Frontend'  paddingYX={"6px 30px"}>Design</Button>
         </Fade>
       </div>
       <Fade direction="right">

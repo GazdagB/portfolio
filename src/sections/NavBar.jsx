@@ -17,6 +17,9 @@ const NavBar = ({scrollY,elementPlacements}) => {
     width: 100,
     opacity: 0
   });
+
+  const btnHoverStyles = {scale: 1.05, backgroundColor: "#EF479B", boxShadow: "0px 10px 10px rgba(0, 0, 0, 0.3)" }
+
   // State to track the selected tab
   const [selected, setSelected] = useState({
     width: 100,
@@ -70,7 +73,7 @@ const NavBar = ({scrollY,elementPlacements}) => {
             <Tab anchorTo={"#contact"} isScrollSelected={tabSelected === "contact"} data-tab="Contact" setPosition={setPosition} selected={selected} setSelected={setSelected} >Contact</Tab>
             <Cursor position={position} />
           </ul>
-          <Button whileHover={{scale: 1.05, backgroundColor: "#EF479B"}} bgColor="#164EF5" classes={"text-white flex gap-2 items-center py-1 px-5 rounded-full 2xl:py-2"}><FaFileDownload className="mb-1" />
+          <Button whileHover={btnHoverStyles} bgColor="#164EF5" classes={"text-white flex gap-2 items-center py-1 px-5 rounded-full 2xl:py-2"}><FaFileDownload className="mb-1" />
           Download CV</Button>
         </div>
       </motion.nav>
