@@ -10,9 +10,6 @@ const Tab = ({ children, setPosition, selected, setSelected, isScrollSelected, a
     scale: 1.05
   }
 
-  let selectedScale;
-  
-
   function handleMouseEnter() {
     if (!ref.current) return;
 
