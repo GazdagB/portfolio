@@ -26,7 +26,7 @@ const Contact = () => {
                   <button className='bg-[#EF479B] inline px-8 py-2 rounded-full text-white font-bold sm:mb-20 self-start'>SEND</button>
               </form>
           </div>
-          <div className='bg-[#164EF5] w-full h-[224px] lg:w-[350px] px-10 py-8 text-white flex flex-col sm:rounded-lg bottom-[-250px] lg:bottom-[150px] lg:right-[-100px] right-[-200px] justify-center sm:w-[537px] sm:h-[362px] sm:absolute'>
+          <div className='bg-[#164EF5] w-full h-[224px] lg:w-[360px] px-10 py-8 text-white flex flex-col sm:rounded-lg bottom-[-250px] lg:bottom-[150px] lg:right-[-140px] right-[-200px] justify-center sm:w-[537px] sm:h-[362px] sm:absolute'>
                   <h3 className='text-[22px] sm:text-[31px] font-black sm:mb-10'>Contact me</h3>
                   <div className='flex flex-col'>
                       <a className='flex text-[20px] sm:text-[25px] items-center gap-3 mb-1' href="mailto:gazdagbal@gmail.com"> <MdOutlineMailOutline className='text-[20px] mb-1' />  gazdagbal@gmail.com</a>
