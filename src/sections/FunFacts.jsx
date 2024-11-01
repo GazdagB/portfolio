@@ -1,13 +1,19 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, memo } from 'react';
 import Button from '../components/Button'
 import funFacts from '../assets/facts.json';
 import { animated, useSpring } from '@react-spring/web'
+import {Fade} from "react-awesome-reveal"
 
-const FunFacts = () => {
+const FunFacts = memo(function FunFacts() {
   const [fact, setFact] = useState(funFacts[0]);
   const [showNewFact, setShowNewFact] = useState(false);
   const [contentHeight, setContentHeight] = useState(0);
   const contentRef = useRef(null);
+
+  const btnHoverStyles = {
+    scale: 1.05,
+    boxShadow: "0px 10px 10px rgba(0, 0, 0, 0.3)"
+  }
 
   const fadeOut = useSpring({
     opacity: showNewFact ? 0 : 1,
@@ -46,22 +52,26 @@ const FunFacts = () => {
     setTimeout(() => {
       setFact(prevFact => getRandomFact(funFacts, prevFact));
       setShowNewFact(false); // Trigger slide in
-    }, 200); // Match the duration of the fade out animation
+    }, 200); // Match the duration of- the fade out animation
   }
 
   return (
-    <div className='bg-[#2C2C2C] text-white flex flex-col items-center py-10 px-10 w-full text-pretty'>
+    <div className='bg-[#2C2C2C] text-white flex flex-col items-center py-10 px-10 2xl:py-16 w-full text-pretty'>
+      <Fade direction='up'>
       <h2 className='text-[23px] sm:text-[31px] font-[700] mb-4'>Random facts about me</h2>
       <animated.div style={{ ...containerSpring, overflow: 'hidden' }} className={"mb-10"}>
         <animated.div style={showNewFact ? fadeOut : slideIn} className='text-center' ref={contentRef}>
-          {fact && <p className='text-[18px] sm:text-[20px]'><span className='text-[#EF479B]'>{`FACT ${fact.number}: `}</span>{fact.fact}</p>}
+          {fact && <p className='text-[18px] sm:text-[20px] 2xl:text-2xl'><span className='text-[#EF479B]'>{`FACT ${fact.number}: `}</span>{fact.fact}</p>}
         </animated.div>
       </animated.div>
-      <Button onClick={handleNewFact} classes={"rounded-full font-bold"} text='New Fact' bgColor='#EF479B' paddingYX={"11px 7px"} width={"124px"}>
+      <Button whileHover={btnHoverStyles} isAnimated={true} onClick={handleNewFact} classes={"rounded-full font-bold"} text='New Fact' bgColor='#EF479B' paddingYX={"11px 7px"} width={"124px"} height={"46px"}>
         NEW FACT
       </Button>
+      </Fade>
     </div>
   )
-}
+})
 
-export default FunFacts
+FunFacts.displayName = "FunFacts";
+
+export default FunFacts;

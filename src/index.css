@@ -3,6 +3,11 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 *{
   box-sizing: border-box;
   padding: 0;
