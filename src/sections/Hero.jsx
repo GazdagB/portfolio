@@ -1,4 +1,6 @@
 import gbCharicature from "../assets/images/gb-charicature.png"
+import gbHelloWorld from "../assets/images/gb-helloworld.png"
+import gbBasic from "../assets/images/gb-basic.png"
 import Button from '../components/Button'
 import {Fade} from 'react-awesome-reveal'
 import {motion} from "framer-motion"
@@ -13,9 +15,9 @@ const Hero = () => {
 
   return (
     <div className='w-full flex justify-center bg-white'>
-        <div className="h-svh  w-full flex flex-col lg:flex-row-reverse items-center justify-center 2xl:justify-between 2xl:max-w-[1400px] lg:gap-[2%]">
+        <div className="h-svh  w-full flex flex-col lg:flex-row-reverse items-center justify-center lg:flex-row lg:pt-32 2xl:justify-between 2xl:max-w-[1400px] lg:gap-[5%]">
           <Fade direction="right">
-            <motion.img whileHover={{rotateY: 10, rotateX: 20, perspective: 100, scale: 1.1}} className='h-[156px] sm:h-[350px] lg:h-[500px] 2xl:h-[600px] lg:self-end  mb-[32px]' src={gbCharicature} alt="" />
+            <motion.img whileHover={{rotateY: 10, rotateX: 20, perspective: 100, scale: 1.1}} className='h-[156px] sm:h-[350px] lg:h-[500px] 2xl:h-[600px] lg:self-end  mb-[32px]' src={gbHelloWorld} alt="" />
           </Fade>
           <div className="flex flex-col justify-center">
           <Fade cascade={true} direction="left" delay={50} duration={500}>
