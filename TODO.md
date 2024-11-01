@@ -7,8 +7,8 @@ In this file I list all of the todos related to my portfolio page project.
 [Custom Curosr Youtube Video](https://www.youtube.com/watch?v=nr3U-RpaQuM)
 
 ## Switch Hero Image 
-* Switch image. 
-* Moving mouse will move hero image. 
+- [x] Switch image. 
+- [ ] Moving mouse will move hero image. 
 
 ## Make the contact form work 
 - [ ] Implement "Backend for cotnacting me"
